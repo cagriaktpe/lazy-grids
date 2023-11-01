@@ -12,13 +12,14 @@ struct ContentView: View {
     
     private let columns: [GridItem] = [
         GridItem(.flexible()),
-        GridItem(.flexible()),
-        GridItem(.flexible())
+        GridItem(.fixed(100)),
+        GridItem(.fixed(100)),
+        GridItem(.fixed(50)),
     ]
     
     var body: some View {
         ScrollView {
-            LazyVGrid(columns: columns, spacing: 31)
+            LazyVGrid(columns: columns)
             {
                 ForEach(items, id: \.self) { item in
                     Text(item)

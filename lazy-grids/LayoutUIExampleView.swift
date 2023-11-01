@@ -36,7 +36,7 @@ struct LayoutUIExampleView: View {
             ) {
                 ForEach(1 ... 50, id: \.self) { item in
                     Text("Item \(item)")
-                        .frame(height: 250)
+                        .frame(height: isMultiColumn ? 100 : 50)
                         .frame(maxWidth: .infinity)
                         .padding()
                         .background(Color.blue, in: RoundedRectangle(cornerRadius: 8, style: .continuous))

@@ -17,10 +17,10 @@ struct ContentView: View {
     ]
     
     var body: some View {
-        ScrollView {
-            LazyVGrid(
-                columns: columns,
-                alignment: .leading,
+        ScrollView(.horizontal) {
+            LazyHGrid(
+                rows: columns,
+                alignment: .top,
                 spacing: 32,
                 pinnedViews: .sectionHeaders
             )

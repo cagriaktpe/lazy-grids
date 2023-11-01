@@ -11,16 +11,7 @@ struct LayoutUIExampleView: View {
     @State private var isMultiColumn: Bool = false
 
     private var columns: [GridItem] {
-        if isMultiColumn {
-            return [
-                GridItem(.flexible(minimum: 100)),
-                GridItem(.flexible(minimum: 100)),
-            ]
-        } else {
-            return [
-                GridItem(.flexible(minimum: 100)),
-            ]
-        }
+        Array(repeating: .init(.flexible()), count: isMultiColumn ? 2 : 1)
     }
 
     var body: some View {

@@ -42,6 +42,7 @@ struct LayoutUIExampleView: View {
                         .background(Color.blue, in: RoundedRectangle(cornerRadius: 8, style: .continuous))
                 }
             }
+            .animation(.spring(), value: isMultiColumn)
             .padding()
         }
     }

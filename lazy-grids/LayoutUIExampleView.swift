@@ -12,7 +12,7 @@ struct LayoutUIExampleView: View {
 
     private var columns: [GridItem] {
         [
-            GridItem(.fixed(100)),
+            GridItem(.flexible()),
         ]
     }
 
@@ -22,7 +22,8 @@ struct LayoutUIExampleView: View {
                 columns: columns,
                 alignment: .trailing,
                 spacing: 16
-            ) {
+            ) 
+            {
                 Button {
                     isMultiColumn.toggle()
                 } label: {
@@ -30,6 +31,14 @@ struct LayoutUIExampleView: View {
                         .padding()
                         .frame(maxWidth: .infinity)
                         .background(.pink)
+                }
+                
+                ForEach(1...50, id: \.self) { item in
+                    Text("Item \(item)")
+                        .frame(height: 250)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(Color.blue, in: RoundedRectangle(cornerRadius: 8, style: .continuous))
                 }
             }
             .padding()

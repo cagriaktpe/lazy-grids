@@ -16,22 +16,21 @@ struct LayoutUIExampleView: View {
 
     var body: some View {
         ScrollView {
+            Button {
+                isMultiColumn.toggle()
+            } label: {
+                Image(systemName: isMultiColumn ? "rectangle.grid.1x2" : "rectangle.grid.2x2")
+                    .font(.title)
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(.mint, in: RoundedRectangle(cornerRadius: 8, style: .continuous)
+                    )
+            }
             LazyVGrid(
                 columns: columns,
                 alignment: .trailing,
                 spacing: 16
             ) {
-                Button {
-                    isMultiColumn.toggle()
-                } label: {
-                    Image(systemName: isMultiColumn ? "rectangle.grid.1x2" : "rectangle.grid.2x2")
-                        .font(.title)
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(.mint, in: RoundedRectangle(cornerRadius: 8, style: .continuous)
-                        )
-                }
-
                 ForEach(1 ... 50, id: \.self) { item in
                     Text("Item \(item)")
                         .frame(height: 250)

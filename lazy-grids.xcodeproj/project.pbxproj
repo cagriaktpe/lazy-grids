@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8144E86A2AF22ADB00833E8B /* LayoutUIExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8144E8692AF22ADB00833E8B /* LayoutUIExampleView.swift */; };
 		81BB7BDF2AF138E60036A8BE /* lazy_gridsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BB7BDE2AF138E60036A8BE /* lazy_gridsApp.swift */; };
 		81BB7BE12AF138E60036A8BE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BB7BE02AF138E60036A8BE /* ContentView.swift */; };
 		81BB7BE32AF138E80036A8BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81BB7BE22AF138E80036A8BE /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8144E8692AF22ADB00833E8B /* LayoutUIExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutUIExampleView.swift; sourceTree = "<group>"; };
 		81BB7BDB2AF138E60036A8BE /* lazy-grids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "lazy-grids.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BB7BDE2AF138E60036A8BE /* lazy_gridsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lazy_gridsApp.swift; sourceTree = "<group>"; };
 		81BB7BE02AF138E60036A8BE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 				81BB7BE22AF138E80036A8BE /* Assets.xcassets */,
 				81BB7BE42AF138E80036A8BE /* lazy_grids.entitlements */,
 				81BB7BE52AF138E80036A8BE /* Preview Content */,
+				8144E8692AF22ADB00833E8B /* LayoutUIExampleView.swift */,
 			);
 			path = "lazy-grids";
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81BB7BE12AF138E60036A8BE /* ContentView.swift in Sources */,
+				8144E86A2AF22ADB00833E8B /* LayoutUIExampleView.swift in Sources */,
 				81BB7BDF2AF138E60036A8BE /* lazy_gridsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,10 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    private let items = (1...1000).map { "Item \($0)" }
+    private let items = (1...50).map { "Item \($0)" }
     
     private let columns: [GridItem] = [
-        GridItem(.flexible()),
         GridItem(.fixed(100)),
         GridItem(.fixed(100)),
         GridItem(.fixed(50)),
@@ -19,13 +18,39 @@ struct ContentView: View {
     
     var body: some View {
         ScrollView {
-            LazyVGrid(columns: columns)
+            LazyVGrid(
+                columns: columns,
+                alignment: .leading,
+                spacing: 32,
+                pinnedViews: .sectionHeaders
+            )
             {
-                ForEach(items, id: \.self) { item in
-                    Text(item)
+                Section {
+                    ForEach(items, id: \.self) { item in
+                        Text(item)
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 50)
+                            .background(Color.blue, in: RoundedRectangle(cornerRadius: 8, style: .continuous))
+                    }
+                } header: {
+                    Text("Section 1")
+                        .padding()
                         .frame(maxWidth: .infinity)
-                        .padding(.vertical, 50)
-                        .background(Color.blue, in: RoundedRectangle(cornerRadius: 8, style: .continuous))
+                        .background(.mint)
+                }
+                
+                Section {
+                    ForEach(items, id: \.self) { item in
+                        Text(item)
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 50)
+                            .background(Color.red, in: RoundedRectangle(cornerRadius: 8, style: .continuous))
+                    }
+                } header: {
+                    Text("Section 2")
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(.pink)
                 }
             }
         }

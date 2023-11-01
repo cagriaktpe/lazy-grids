@@ -26,6 +26,9 @@ struct LayoutUIExampleView: View {
                     .background(.mint, in: RoundedRectangle(cornerRadius: 8, style: .continuous)
                     )
             }
+            .frame(maxWidth: .infinity, alignment: .trailing)
+            .padding()
+            
             LazyVGrid(
                 columns: columns,
                 alignment: .trailing,
